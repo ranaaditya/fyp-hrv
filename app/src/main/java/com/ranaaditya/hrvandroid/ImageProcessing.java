@@ -2,6 +2,21 @@ package com.ranaaditya.hrvandroid;
 
 public abstract class ImageProcessing {
 
+    /**
+     *
+     * @param yuv420sp
+     * @param width
+     * @param height
+     *
+     * RGB to YUV Color conversion schema
+     * Y = 0.299R + 0.587G + 0.114B
+     *
+     * U’= (B-Y)*0.565
+     *
+     * V’= (R-Y)*0.713
+     *
+     * @return
+     */
     private static int decodeYUV420SPtoRedSum(byte[] yuv420sp, int width, int height) {
         if (yuv420sp == null) return 0;
 
